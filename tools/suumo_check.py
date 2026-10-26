@@ -58,6 +58,18 @@ NOISE_ZONE = {
     "庄内西町": ({1, 2}, {3}), "庄内東町": ({1, 3, 4, 5}, {2, 6}),
     "豊南町南": ({1, 2, 3, 4, 5, 6}, set()),
 }
+# 豊中市の中学校区（豊中市の通学区域表、2026年4月1日時点）。町名の先頭一致で判定し、長い町名から照合する
+TOYONAKA_JHS = {
+    "第五中（除外）": ["岡町", "勝部", "末広町", "立花町", "玉井町", "走井", "宝山町", "箕輪", "山ノ上町"],
+    "第三中": ["赤阪", "岡上の町", "北桜塚", "栗ヶ丘町", "曽根東町1", "中桜塚", "南桜塚", "夕日丘"],
+    "第四中": ["稲津町", "城山町", "曽根東町", "長興寺南", "服部寿町1", "服部寿町2", "服部寿町3",
+               "服部西町1", "服部西町2", "服部西町3", "服部本町", "服部南町", "服部元町", "穂積"],
+    "第一中": ["今在家町", "上津島", "曽根西町", "曽根南町", "利倉", "服部寿町", "服部西町", "服部豊町",
+               "原田", "名神口1", "南空港町"],
+    "第十八中": ["石橋麻田町", "清風荘", "蛍池", "螢池"],
+    "第十三中": ["柴原町1", "柴原町2", "千里園", "刀根山", "本町"],
+}
+EXCLUDED_JHS = "第五中（除外）"
 UA = "Mozilla/5.0"
 
 
@@ -127,6 +139,16 @@ def noise_of(address):
             return "騒音対策区域にかかる町（丁目不明）"
         return ""
     return ""
+
+
+def jhs_of(address):
+    """豊中市の住所から中学校区を返す。分からなければ空文字。"""
+    m = re.search(r"豊中市(.+)", address)
+    if not m:
+        return ""
+    town = m.group(1).translate(str.maketrans("０１２３４５６７８９", "0123456789"))
+    pairs = sorted(((p, j) for j, ps in TOYONAKA_JHS.items() for p in ps), key=lambda x: -len(x[0]))
+    return next((j for p, j in pairs if town.startswith(p)), "")
 
 
 def area_of(r):
@@ -200,6 +222,9 @@ def main():
             continue
         if not any(f"「{s}」" in r["access"] for s in STATIONS):
             continue
+        r["jhs"] = jhs_of(r["address"])
+        if r["jhs"] == EXCLUDED_JHS:
+            continue  # 豊中市の第五中校区は除外
         flags = [next((v for k, v in AREA_FLAGS.items() if k in r["address"]), ""), noise_of(r["address"])]
         r["area_flag"] = " / ".join(f for f in flags if f)
         r["rank"] = "条件を満たす" if area_of(r) >= MIN_AREA else "惜しい（75〜79㎡）"
@@ -240,7 +265,7 @@ def main():
                          "権利:" + h.get("rights", "?"), "オートロック:" + h.get("autolock", "?"),
                          f"{h.get('floor')}階/{h.get('stories')}階建", "EV:" + h.get("elevator", "?"),
                          "管理費:" + h.get("kanri", "?"), "修繕:" + h.get("shuzen", "?"),
-                         h.get("area_flag", ""), h["url"]]))
+                         "中学:" + (h.get("jhs") or "要確認"), h.get("area_flag", ""), h["url"]]))
     for p in ended:
         print("\t".join(["掲載終了", "", p["name"], p["price"], p["url"]]))
 
