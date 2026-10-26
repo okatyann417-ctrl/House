@@ -28,7 +28,8 @@ STATIONS = {
 MIN_AREA = 80.0
 NEAR_AREA = 75.0
 MAX_WALK = 10
-MIN_BUILT = (1996, 10)  # 築30年以内（2026年10月時点）
+MAX_AGE = 25  # 築25年以内（実行日から数える）
+MIN_FLOOR = 2
 CITIES = ("豊中市", "吹田市")
 # エリア検討で除外・要注意とした地域（住所に含まれる文字で判定）
 AREA_FLAGS = {
@@ -130,6 +131,18 @@ def check_detail(r):
     m = re.search(r"権利形態\s*(\S+)", t)
     r["rights"] = m.group(1) if m else "不明"
     r["autolock"] = "あり" if "オートロック" in t else "記載なし（要確認）"
+    m = re.search(r"所在階(?:/構造・階建)?\s*(\d+)階", t)
+    r["floor"] = int(m.group(1)) if m else None
+    m = re.search(r"(\d+)階建", t)
+    r["stories"] = int(m.group(1)) if m else None
+    if re.search(r"エレベー[タ夕]ー?\s*(?:なし|無)", t):
+        r["elevator"] = "なし"
+    elif "エレベーター" in t or "エレベータ" in t:
+        r["elevator"] = "あり"
+    elif r["stories"] and r["stories"] >= 6:
+        r["elevator"] = "あり（6階建以上のため推定）"
+    else:
+        r["elevator"] = "要確認"
     for key, label in (("kanri", "管理費"), ("shuzen", "修繕積立金")):
         m = re.search(label + r"\s*(\S+円／月|\S+)", t)
         r[key] = m.group(1) if m else "不明"
@@ -137,12 +150,14 @@ def check_detail(r):
 
 
 def main():
+    today = date.today()
+    min_built = (today.year - MAX_AGE, today.month)
     rows = collect()
     hits = []
     for r in rows:
         if not any(c in r["address"] for c in CITIES):
             continue
-        if walk_of(r) > MAX_WALK or built_of(r) < MIN_BUILT or area_of(r) < NEAR_AREA:
+        if walk_of(r) > MAX_WALK or built_of(r) < min_built or area_of(r) < NEAR_AREA:
             continue
         if not any(f"「{s}」" in r["access"] for s in STATIONS):
             continue
@@ -151,6 +166,10 @@ def main():
         check_detail(r)
         if "借地" in r.get("rights", ""):
             continue  # 条件1：所有権のみ
+        if r.get("floor") is not None and r["floor"] < MIN_FLOOR:
+            continue  # 2階以上
+        if r.get("elevator") == "なし":
+            continue  # エレベーターあり
         hits.append(r)
 
     prev = {}
@@ -164,7 +183,9 @@ def main():
             h["change"] = f"価格変更（{prev[h['id']]['price']}→{h['price']}）"
         else:
             h["change"] = ""
-    ended = [p for i, p in prev.items() if i not in cur]
+    scanned_ids = {r["id"] for r in rows}
+    # 一覧から消えたものだけを掲載終了とする（条件変更で外れたものは含めない）
+    ended = [p for i, p in prev.items() if i not in scanned_ids]
 
     SNAPSHOT.parent.mkdir(exist_ok=True)
     SNAPSHOT.write_text(json.dumps(
@@ -177,6 +198,7 @@ def main():
         print("\t".join([h["rank"], h["change"], h["name"], h["price"], h["address"],
                          h["access"], h["area_text"], h["built"],
                          "権利:" + h.get("rights", "?"), "オートロック:" + h.get("autolock", "?"),
+                         f"{h.get('floor')}階/{h.get('stories')}階建", "EV:" + h.get("elevator", "?"),
                          "管理費:" + h.get("kanri", "?"), "修繕:" + h.get("shuzen", "?"),
                          h.get("area_flag", ""), h["url"]]))
     for p in ended:
