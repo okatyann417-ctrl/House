@@ -40,8 +40,23 @@ AREA_FLAGS = {
     "江の木町": "江坂の南側（水害リスク要確認）",
     "江坂町": "垂水町・豊津町の北側ではない（ハザード要確認）",
     "服部": "天竺川沿いの低地でないか要確認",
-    "螢池": "ハザード未評価・空港騒音要確認",
-    "蛍池": "ハザード未評価・空港騒音要確認",
+    "螢池": "ハザード未評価（騒音対策区域外）",
+    "蛍池": "ハザード未評価（騒音対策区域外）",
+}
+# 伊丹空港の航空機騒音対策区域（第1種区域、Lden 62dB以上）。豊中市の早見表（2026年度）より
+# 町名: (区域内の丁目, 一部だけ区域内の丁目)。丁目の集合が None なら町全体が区域内
+NOISE_ZONE = {
+    "箕輪": ({3}, set()), "走井": ({1, 2, 3}, set()), "勝部": ({1, 2, 3}, set()),
+    "原田西町": (None, set()), "原田中": ({1, 2}, set()), "原田元町": ({2, 3}, {1}),
+    "原田南": ({1, 2}, set()), "曽根西町": (set(), {2}), "曽根南町": ({2, 3}, {1}),
+    "利倉東": ({1, 2}, set()), "利倉": ({1, 2, 3}, set()), "服部豊町": (set(), {2}),
+    "服部西町": ({3, 4, 5}, {1, 2}), "服部南町": (set(), {3, 4, 5}),
+    "服部寿町": ({1, 2, 3, 4, 5}, set()), "上津島": (set(), {1, 3}), "浜": (set(), {3}),
+    "名神口": (set(), {1}), "稲津町": ({1, 2, 3}, set()), "穂積": ({1, 2}, set()),
+    "野田町": (None, set()), "庄内栄町": (set(), {1}), "庄内幸町": (set(), {1, 2}),
+    "豊南町東": ({3, 4}, {1, 2}), "豊南町西": ({1, 2, 3, 4, 5}, set()),
+    "庄内西町": ({1, 2}, {3}), "庄内東町": ({1, 3, 4, 5}, {2, 6}),
+    "豊南町南": ({1, 2, 3, 4, 5, 6}, set()),
 }
 UA = "Mozilla/5.0"
 
@@ -88,6 +103,30 @@ def parse_list(page):
             "built": field(txt, "築年月"),
         })
     return rows
+
+
+def noise_of(address):
+    """住所が航空機騒音対策区域に入るかを返す（豊中市のみ）。"""
+    if "豊中市" not in address:
+        return ""
+    a = address.translate(str.maketrans("０１２３４５６７８９", "0123456789"))
+    # 長い町名から照合する（「利倉東」を「利倉」より先に）
+    for town in sorted(NOISE_ZONE, key=len, reverse=True):
+        m = re.search(re.escape(town) + r"(\d*)", a)
+        if not m:
+            continue
+        full, part = NOISE_ZONE[town]
+        if full is None:
+            return "騒音対策区域内"
+        chome = int(m.group(1)) if m.group(1) else None
+        if chome in full:
+            return "騒音対策区域内"
+        if chome in part:
+            return "騒音対策区域に一部かかる（番地で要確認）"
+        if chome is None:
+            return "騒音対策区域にかかる町（丁目不明）"
+        return ""
+    return ""
 
 
 def area_of(r):
@@ -161,7 +200,8 @@ def main():
             continue
         if not any(f"「{s}」" in r["access"] for s in STATIONS):
             continue
-        r["area_flag"] = next((v for k, v in AREA_FLAGS.items() if k in r["address"]), "")
+        flags = [next((v for k, v in AREA_FLAGS.items() if k in r["address"]), ""), noise_of(r["address"])]
+        r["area_flag"] = " / ".join(f for f in flags if f)
         r["rank"] = "条件を満たす" if area_of(r) >= MIN_AREA else "惜しい（75〜79㎡）"
         check_detail(r)
         if "借地" in r.get("rights", ""):
