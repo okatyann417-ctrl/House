@@ -1,6 +1,6 @@
 {
- "date": "2026-11-02",
- "scanned": 414,
+ "date": "2026-11-09",
+ "scanned": 415,
  "hits": [
   {
    "id": "22074352",
@@ -22,7 +22,7 @@
    "elevator": "あり",
    "kanri": "1万6820円／月",
    "shuzen": "1万8920円／月",
-   "change": "新着"
+   "change": ""
   },
   {
    "id": "22069030",
@@ -44,7 +44,7 @@
    "elevator": "あり",
    "kanri": "1万6820円／月",
    "shuzen": "1万8920円／月",
-   "change": "新着"
+   "change": ""
   },
   {
    "id": "21696611",
@@ -155,6 +155,28 @@
    "kanri": "8300円／月",
    "shuzen": "1万1330円／月",
    "change": ""
+  },
+  {
+   "id": "22094811",
+   "url": "https://suumo.jp/ms/chuko/osaka/sc_toyonaka/nc_22094811/",
+   "name": "アリスト豊中清風荘",
+   "price": "3780万円",
+   "address": "大阪府豊中市清風荘１",
+   "access": "阪急宝塚線「蛍池」徒歩10分",
+   "area_text": "75.22m 2 （22.75坪）（壁芯）",
+   "built": "2007年8月",
+   "search_station": "蛍池",
+   "jhs": "第十八中",
+   "area_flag": "",
+   "rank": "惜しい（75〜79㎡）",
+   "rights": "所有権",
+   "autolock": "記載なし（要確認）",
+   "floor": 2,
+   "stories": 11,
+   "elevator": "あり",
+   "kanri": "8400円／月",
+   "shuzen": "1万6700円／月",
+   "change": "新着"
   }
  ]
 }
