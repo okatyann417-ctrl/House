@@ -24,6 +24,11 @@ STATIONS = {
     "服部天神": "30850",
     "江坂": "04840",
     "蛍池": "35083",
+    # 2026-11-12 追加（丘陵地。ゆるい坂は許容し、駅との高低差は内見で確認する）
+    "少路": "18560",
+    "千里山": "21590",
+    "南千里": "37610",
+    "山田": ["40330", "40333"],  # モノレール・千里線
 }
 MIN_AREA = 80.0
 NEAR_AREA = 75.0
@@ -40,6 +45,15 @@ AREA_FLAGS = {
     "江の木町": "江坂の南側（水害リスク要確認）",
     "江坂町": "垂水町・豊津町の北側ではない（ハザード要確認）",
     "服部": "天竺川沿いの低地でないか要確認",
+    "千里山": "丘陵地（駅との高低差を内見で確認）",
+    "津雲台": "丘陵地（駅との高低差を内見で確認）",
+    "高野台": "丘陵地（駅との高低差を内見で確認）",
+    "佐竹台": "丘陵地（駅との高低差を内見で確認）",
+    "竹見台": "丘陵地（駅との高低差を内見で確認）",
+    "山田": "丘陵地（駅との高低差を内見で確認）",
+    "少路": "丘陵地（駅との高低差を内見で確認）",
+    "西緑丘": "丘陵地（駅との高低差を内見で確認）",
+    "東豊中": "丘陵地（駅との高低差を内見で確認）",
     "螢池": "ハザード未評価（騒音対策区域外）",
     "蛍池": "ハザード未評価（騒音対策区域外）",
 }
@@ -68,7 +82,50 @@ TOYONAKA_JHS = {
                "原田", "名神口1", "南空港町"],
     "第十八中": ["石橋麻田町", "清風荘", "蛍池", "螢池"],
     "第十三中": ["柴原町1", "柴原町2", "千里園", "刀根山", "本町"],
+    "第十一中": ["上野坂", "上野西2", "上野西3", "上野東2", "上野東3", "少路", "西緑丘1", "西緑丘2",
+                 "東豊中町1", "東豊中町2", "東豊中町3", "東豊中町4", "緑丘"],
+    "第十五中": ["熊野町", "東豊中町5", "東豊中町6"],
+    "第十四中": ["永楽荘", "春日町3", "春日町4", "春日町5", "北緑丘", "向丘2", "向丘3"],
+    "第二中": ["春日町1", "春日町2", "桜の町", "柴原町", "宮山町", "向丘1"],
+    "要確認（番地で第三中か第十一中）": ["上野西1"],
+    "要確認（番地で第十一中か第二中）": ["上野西4"],
+    "要確認（番地で第十一中か第十四中）": ["西緑丘3"],
 }
+# 吹田市の通学区域（吹田市「市立小・中学校通学区域表」令和7年4月1日改正、対象駅の周辺だけ）
+# (町名, 丁目の集合 or None=全域, 小学校, 中学校)。同じ町・丁目に複数行あるときは番地で分かれる
+SUITA_SCHOOLS = [
+    ("江坂町", {1}, "豊津第一小", "豊津中"), ("江坂町", {2}, "江坂大池小", "豊津西中"),
+    ("江坂町", {2}, "豊津第二小", "豊津西中"), ("江坂町", {3, 4}, "江坂大池小", "豊津西中"),
+    ("江坂町", {5}, "千里第三小", "第一中"), ("江の木町", None, "豊津第二小", "豊津西中"),
+    ("垂水町", None, "豊津第一小", "豊津中"), ("豊津町", None, "豊津第二小", "豊津西中"),
+    ("広芝町", None, "豊津第一小", "豊津中"), ("芳野町", None, "豊津第二小", "豊津西中"),
+    ("円山町", None, "千里第三小", "第一中"),
+    ("千里山霧が丘", None, "千里第二小", "第一中"), ("千里山高塚", None, "千里第二小", "第一中"),
+    ("千里山竹園", {1}, "千里新田小", "南千里中"), ("千里山竹園", {1}, "千里第三小", "第一中"),
+    ("千里山竹園", {2}, "桃山台小", "竹見台中"), ("千里山竹園", {2}, "千里新田小", "南千里中"),
+    ("千里山月が丘", None, "千里第二小", "第一中"), ("千里山西", {1, 2, 3, 4, 5}, "千里第三小", "第一中"),
+    ("千里山西", {6}, "桃山台小", "竹見台中"), ("千里山西", {6}, "千里新田小", "南千里中"),
+    ("千里山虹が丘", None, "千里第二小", "第一中"), ("千里山東", {1, 2, 4}, "千里第二小", "第一中"),
+    ("千里山東", {3}, "千里第二小", "第一中"), ("千里山東", {3}, "山手小", "豊津中"),
+    ("千里山星が丘", None, "千里第二小", "第一中"), ("千里山松が丘", None, "千里第二小", "第一中"),
+    ("佐井寺", {1, 2, 3}, "佐井寺小", "佐井寺中"), ("佐井寺", {4}, "佐竹台小", "高野台中"),
+    ("佐竹台", None, "佐竹台小", "高野台中"), ("高野台", None, "高野台小", "高野台中"),
+    ("竹見台", None, "千里たけみ小", "竹見台中"), ("桃山台", None, "桃山台小", "竹見台中"),
+    ("津雲台", {1}, "高野台小", "高野台中"), ("津雲台", {2, 3, 4, 5, 6, 7}, "津雲台小", "古江台中"),
+    ("古江台", None, "古江台小", "古江台中"),
+    ("春日", {1, 2}, "千里新田小", "南千里中"), ("春日", {3, 4}, "千里新田小", "南千里中"),
+    ("春日", {3, 4}, "桃山台小", "竹見台中"),
+    ("山田市場", None, "南山田小", "山田中"), ("山田市場", None, "山田第三小", "西山田中"),
+    ("山田丘", None, "北山田小", "山田東中"), ("山田北", None, "北山田小", "山田東中"),
+    ("山田西", {1}, "山田第三小", "西山田中"), ("山田西", {2, 3}, "西山田小", "西山田中"),
+    ("山田西", {4}, "北山田小", "山田東中"), ("山田西", {4}, "津雲台小", "古江台中"),
+    ("山田東", {1, 2, 3}, "山田第一小", "山田東中"), ("山田東", {2, 4}, "北山田小", "山田東中"),
+    ("山田南", None, "山田第三小", "西山田中"), ("千里丘西", None, "南山田小", "山田中"),
+    ("樫切山", None, "南山田小", "山田中"), ("長野東", None, "南山田小", "山田中"),
+    ("長野西", None, "南山田小", "山田中"), ("尺谷", None, "南山田小", "山田中"),
+    ("山手町", {1, 2}, "山手小", "豊津中"), ("山手町", {3}, "千里第二小", "第一中"),
+    ("山手町", {3}, "山手小", "豊津中"), ("山手町", {4}, "片山小", "片山中"),
+]
 EXCLUDED_JHS = "第五中（除外）"
 UA = "Mozilla/5.0"
 
@@ -151,6 +208,25 @@ def jhs_of(address):
     return next((j for p, j in pairs if town.startswith(p)), "")
 
 
+def suita_school_of(address):
+    """吹田市の住所から「小学校→中学校」を返す。分からなければ空文字。"""
+    m = re.search(r"吹田市(.+)", address)
+    if not m:
+        return ""
+    a = m.group(1).translate(str.maketrans("０１２３４５６７８９", "0123456789"))
+    towns = sorted({t for t, *_ in SUITA_SCHOOLS}, key=len, reverse=True)
+    town = next((t for t in towns if a.startswith(t)), None)
+    if not town:
+        return ""
+    cm = re.match(re.escape(town) + r"(\d+)", a)
+    chome = int(cm.group(1)) if cm else None
+    hits = {f"{e}→{j}" for t, ch, e, j in SUITA_SCHOOLS
+            if t == town and (ch is None or chome is None or chome in ch)}
+    if len(hits) == 1:
+        return hits.pop()
+    return "／".join(sorted(hits)) + "（番地で要確認）" if hits else ""
+
+
 def area_of(r):
     m = re.search(r"([\d.]+)\s*(?:m|㎡|平米)", r["area_text"])
     return float(m.group(1)) if m else 0.0
@@ -168,7 +244,8 @@ def built_of(r):
 
 def collect():
     found = {}
-    for st, code in STATIONS.items():
+    for st, codes in STATIONS.items():
+      for code in ([codes] if isinstance(codes, str) else codes):
         for page_no in range(1, 30):
             url = f"https://suumo.jp/ms/chuko/osaka/ek_{code}/"
             if page_no > 1:
@@ -192,10 +269,14 @@ def check_detail(r):
     m = re.search(r"権利形態\s*(\S+)", t)
     r["rights"] = m.group(1) if m else "不明"
     r["autolock"] = "あり" if "オートロック" in t else "記載なし（要確認）"
-    m = re.search(r"所在階(?:/構造・階建)?\s*(\d+)階", t)
-    r["floor"] = int(m.group(1)) if m else None
-    m = re.search(r"(\d+)階建", t)
-    r["stories"] = int(m.group(1)) if m else None
+    m = re.search(r"所在階/構造・階建\s*(\d+)階/\D*?(\d+)階建", t)
+    if m:
+        r["floor"], r["stories"] = int(m.group(1)), int(m.group(2))
+    else:
+        m = re.search(r"所在階\s*(\d+)階", t)
+        r["floor"] = int(m.group(1)) if m else None
+        m = re.search(r"構造・階建て?\s*\D*?(\d+)階建", t)
+        r["stories"] = int(m.group(1)) if m else None
     if re.search(r"エレベー[タ夕]ー?\s*(?:なし|無)", t):
         r["elevator"] = "なし"
     elif "エレベーター" in t or "エレベータ" in t:
@@ -205,7 +286,7 @@ def check_detail(r):
     else:
         r["elevator"] = "要確認"
     for key, label in (("kanri", "管理費"), ("shuzen", "修繕積立金")):
-        m = re.search(label + r"\s*(\S+円／月|\S+)", t)
+        m = re.search(label + r"\s*([\d万,]+円／月)", t)
         r[key] = m.group(1) if m else "不明"
     time.sleep(1)
 
@@ -222,7 +303,7 @@ def main():
             continue
         if not any(f"「{s}」" in r["access"] for s in STATIONS):
             continue
-        r["jhs"] = jhs_of(r["address"])
+        r["jhs"] = jhs_of(r["address"]) or suita_school_of(r["address"])
         if r["jhs"] == EXCLUDED_JHS:
             continue  # 豊中市の第五中校区は除外
         flags = [next((v for k, v in AREA_FLAGS.items() if k in r["address"]), ""), noise_of(r["address"])]
@@ -258,8 +339,26 @@ def main():
         ensure_ascii=False, indent=1,
     ))
 
-    print(f"取得件数: {len(rows)}件 / 該当: {len(hits)}件")
-    for h in sorted(hits, key=lambda x: (x["rank"], -area_of(x))):
+    # 同じ部屋を複数の会社が掲載しているものは1行にまとめる（面積・築年月・所在階・町丁目が同じもの）
+    groups = {}
+    for h in hits:
+        town = re.sub(r"[-－].*$", "", h["address"])
+        key = (area_of(h), h["built"], h.get("floor"), town)
+        groups.setdefault(key, []).append(h)
+    merged = []
+    for g in groups.values():
+        g.sort(key=lambda x: (x["change"] != "新着", x["url"]))
+        top = dict(g[0])
+        prices = sorted({x["price"] for x in g})
+        if len(g) > 1:
+            top["price"] = "〜".join([prices[0], prices[-1]]) if len(prices) > 1 else prices[0]
+            top["name"] += f"（{len(g)}社が掲載）"
+        if any(x.get("autolock") == "あり" for x in g):
+            top["autolock"] = "あり"
+        merged.append(top)
+
+    print(f"取得件数: {len(rows)}件 / 該当: {len(hits)}件（重複をまとめて{len(merged)}件）")
+    for h in sorted(merged, key=lambda x: (x["rank"], -area_of(x))):
         print("\t".join([h["rank"], h["change"], h["name"], h["price"], h["address"],
                          h["access"], h["area_text"], h["built"],
                          "権利:" + h.get("rights", "?"), "オートロック:" + h.get("autolock", "?"),
