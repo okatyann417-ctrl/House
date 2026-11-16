@@ -318,20 +318,33 @@ def main():
             continue  # エレベーターあり
         hits.append(r)
 
+    def unit_key(h):
+        # 同じ部屋かどうかの判定（面積・築年月・所在階・町丁目）。掲載会社が変わっても同じ部屋として扱う
+        return (area_of(h), h["built"], h.get("floor"), re.sub(r"[-－].*$", "", h["address"]))
+
     prev = {}
     if SNAPSHOT.exists():
         prev = {h["id"]: h for h in json.loads(SNAPSHOT.read_text())["hits"]}
-    cur = {h["id"]: h for h in hits}
+    prev_units = {}
+    for p in prev.values():
+        prev_units.setdefault(unit_key(p), []).append(p)
     for h in hits:
-        if h["id"] not in prev:
+        old = prev_units.get(unit_key(h))
+        if not old:
             h["change"] = "新着"
-        elif prev[h["id"]]["price"] != h["price"]:
-            h["change"] = f"価格変更（{prev[h['id']]['price']}→{h['price']}）"
+        elif h["price"] not in {o["price"] for o in old}:
+            h["change"] = f"価格変更（{old[0]['price']}→{h['price']}）"
         else:
             h["change"] = ""
     scanned_ids = {r["id"] for r in rows}
-    # 一覧から消えたものだけを掲載終了とする（条件変更で外れたものは含めない）
-    ended = [p for i, p in prev.items() if i not in scanned_ids]
+    cur_units = {unit_key(h) for h in hits}
+    # 一覧から消えた部屋だけを掲載終了とする（条件変更で外れたもの、掲載会社が入れ替わっただけのものは含めない）
+    ended, seen = [], set()
+    for p in prev.values():
+        k = unit_key(p)
+        if p["id"] not in scanned_ids and k not in cur_units and k not in seen:
+            seen.add(k)
+            ended.append(p)
 
     SNAPSHOT.parent.mkdir(exist_ok=True)
     SNAPSHOT.write_text(json.dumps(
@@ -347,7 +360,7 @@ def main():
         groups.setdefault(key, []).append(h)
     merged = []
     for g in groups.values():
-        g.sort(key=lambda x: (x["change"] != "新着", x["url"]))
+        g.sort(key=lambda x: (x["change"] == "", x["url"]))
         top = dict(g[0])
         prices = sorted({x["price"] for x in g})
         if len(g) > 1:

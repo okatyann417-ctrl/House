@@ -1,6 +1,6 @@
 {
- "date": "2026-11-12",
- "scanned": 1240,
+ "date": "2026-11-16",
+ "scanned": 1237,
  "hits": [
   {
    "id": "22069030",
@@ -47,6 +47,28 @@
    "change": ""
   },
   {
+   "id": "21750909",
+   "url": "https://suumo.jp/ms/chuko/osaka/sc_toyonaka/nc_21750909/",
+   "name": "レジデンシャル豊中曽根",
+   "price": "6280万円",
+   "address": "大阪府豊中市城山町１",
+   "access": "阪急宝塚線「曽根」徒歩10分",
+   "area_text": "91.85m 2 （27.78坪）（壁芯）",
+   "built": "2015年11月",
+   "search_station": "曽根",
+   "jhs": "第四中",
+   "area_flag": "",
+   "rank": "条件を満たす",
+   "rights": "所有権",
+   "autolock": "記載なし（要確認）",
+   "floor": 4,
+   "stories": null,
+   "elevator": "あり",
+   "kanri": "1万10円／月",
+   "shuzen": "1万4240円／月",
+   "change": "新着"
+  },
+  {
    "id": "21696611",
    "url": "https://suumo.jp/ms/chuko/osaka/sc_toyonaka/nc_21696611/",
    "name": "アービング服部元町",
@@ -91,28 +113,6 @@
    "change": ""
   },
   {
-   "id": "22160066",
-   "url": "https://suumo.jp/ms/chuko/osaka/sc_suita/nc_22160066/",
-   "name": "プレミスト江坂",
-   "price": "8000万円",
-   "address": "大阪府吹田市江坂町１-１２-１３",
-   "access": "地下鉄御堂筋線「江坂」徒歩6分",
-   "area_text": "85.37m 2 （壁芯）",
-   "built": "2022年2月",
-   "search_station": "江坂",
-   "jhs": "豊津第一小→豊津中",
-   "area_flag": "垂水町・豊津町の北側ではない（ハザード要確認）",
-   "rank": "条件を満たす",
-   "rights": "所有権",
-   "autolock": "あり",
-   "floor": 15,
-   "stories": 15,
-   "elevator": "あり（6階建以上のため推定）",
-   "kanri": "1万7100円／月",
-   "shuzen": "1万200円／月",
-   "change": "新着"
-  },
-  {
    "id": "21809885",
    "url": "https://suumo.jp/ms/chuko/osaka/sc_suita/nc_21809885/",
    "name": "セレッソコート江坂",
@@ -132,50 +132,6 @@
    "elevator": "あり",
    "kanri": "1万6970円／月",
    "shuzen": "1万7680円／月",
-   "change": ""
-  },
-  {
-   "id": "21892174",
-   "url": "https://suumo.jp/ms/chuko/osaka/sc_suita/nc_21892174/",
-   "name": "プラウド江坂",
-   "price": "5980万円",
-   "address": "大阪府吹田市江の木町",
-   "access": "地下鉄御堂筋線「江坂」徒歩9分",
-   "area_text": "75.47m 2 （壁芯）",
-   "built": "2007年3月",
-   "search_station": "江坂",
-   "jhs": "豊津第二小→豊津西中",
-   "area_flag": "江坂の南側（水害リスク要確認）",
-   "rank": "惜しい（75〜79㎡）",
-   "rights": "所有権",
-   "autolock": "記載なし（要確認）",
-   "floor": 7,
-   "stories": 15,
-   "elevator": "あり",
-   "kanri": "1万6820円／月",
-   "shuzen": "1万250円／月",
-   "change": ""
-  },
-  {
-   "id": "20200098",
-   "url": "https://suumo.jp/ms/chuko/osaka/sc_suita/nc_20200098/",
-   "name": "ペルル江坂ブランアージュ",
-   "price": "7380万円",
-   "address": "大阪府吹田市江坂町２",
-   "access": "地下鉄御堂筋線「江坂」徒歩5分",
-   "area_text": "89.89m 2 （壁芯）",
-   "built": "2007年8月",
-   "search_station": "江坂",
-   "jhs": "江坂大池小→豊津西中／豊津第二小→豊津西中（番地で要確認）",
-   "area_flag": "垂水町・豊津町の北側ではない（ハザード要確認）",
-   "rank": "条件を満たす",
-   "rights": "所有権",
-   "autolock": "記載なし（要確認）",
-   "floor": 10,
-   "stories": 15,
-   "elevator": "あり（6階建以上のため推定）",
-   "kanri": "8300円／月",
-   "shuzen": "1万1330円／月",
    "change": ""
   },
   {
@@ -220,13 +176,13 @@
    "elevator": "あり",
    "kanri": "1万5470円／月",
    "shuzen": "3万9700円／月",
-   "change": "新着"
+   "change": ""
   },
   {
    "id": "21703516",
    "url": "https://suumo.jp/ms/chuko/osaka/sc_toyonaka/nc_21703516/",
    "name": "ファインフラッツ豊中桜の町",
-   "price": "6800万円",
+   "price": "6700万円",
    "address": "大阪府豊中市桜の町６",
    "access": "大阪モノレール本線「少路」徒歩8分",
    "area_text": "86.2m 2 （壁芯）",
@@ -242,73 +198,7 @@
    "elevator": "あり（6階建以上のため推定）",
    "kanri": "1万5090円／月",
    "shuzen": "1万7240円／月",
-   "change": "新着"
-  },
-  {
-   "id": "22123376",
-   "url": "https://suumo.jp/ms/chuko/osaka/sc_toyonaka/nc_22123376/",
-   "name": "ディークラディア豊中少路プレビシオンコート",
-   "price": "4680万円",
-   "address": "大阪府豊中市少路１",
-   "access": "大阪モノレール本線「少路」徒歩2分",
-   "area_text": "77.35m 2 （壁芯）",
-   "built": "2005年8月",
-   "search_station": "少路",
-   "jhs": "第十一中",
-   "area_flag": "丘陵地（駅との高低差を内見で確認）",
-   "rank": "惜しい（75〜79㎡）",
-   "rights": "所有権",
-   "autolock": "記載なし（要確認）",
-   "floor": 6,
-   "stories": 7,
-   "elevator": "あり",
-   "kanri": "1万5470円／月",
-   "shuzen": "3万9700円／月",
-   "change": "新着"
-  },
-  {
-   "id": "22127243",
-   "url": "https://suumo.jp/ms/chuko/osaka/sc_toyonaka/nc_22127243/",
-   "name": "ディークラディア豊中小路プレビシオンコート",
-   "price": "4680万円",
-   "address": "大阪府豊中市少路１",
-   "access": "大阪モノレール本線「少路」徒歩4分",
-   "area_text": "77.35m 2 （壁芯）",
-   "built": "2005年8月",
-   "search_station": "少路",
-   "jhs": "第十一中",
-   "area_flag": "丘陵地（駅との高低差を内見で確認）",
-   "rank": "惜しい（75〜79㎡）",
-   "rights": "所有権",
-   "autolock": "あり",
-   "floor": 6,
-   "stories": 7,
-   "elevator": "あり",
-   "kanri": "1万5470円／月",
-   "shuzen": "3万9700円／月",
-   "change": "新着"
-  },
-  {
-   "id": "22079227",
-   "url": "https://suumo.jp/ms/chuko/osaka/sc_toyonaka/nc_22079227/",
-   "name": "ディークラディア豊中小路プレビシオンコート",
-   "price": "4680万円",
-   "address": "大阪府豊中市少路１",
-   "access": "大阪モノレール本線「少路」徒歩2分",
-   "area_text": "77.35m 2 （23.39坪）（壁芯）",
-   "built": "2005年8月",
-   "search_station": "少路",
-   "jhs": "第十一中",
-   "area_flag": "丘陵地（駅との高低差を内見で確認）",
-   "rank": "惜しい（75〜79㎡）",
-   "rights": "所有権",
-   "autolock": "記載なし（要確認）",
-   "floor": 6,
-   "stories": 7,
-   "elevator": "あり",
-   "kanri": "1万5470円／月",
-   "shuzen": "3万9700円／月",
-   "change": "新着"
+   "change": ""
   },
   {
    "id": "21649016",
@@ -330,7 +220,7 @@
    "elevator": "あり（6階建以上のため推定）",
    "kanri": "1万5470円／月",
    "shuzen": "3万9700円／月",
-   "change": "新着"
+   "change": ""
   },
   {
    "id": "22147677",
@@ -352,7 +242,95 @@
    "elevator": "あり",
    "kanri": "1万5470円／月",
    "shuzen": "3万9700円／月",
-   "change": "新着"
+   "change": ""
+  },
+  {
+   "id": "22180488",
+   "url": "https://suumo.jp/ms/chuko/osaka/sc_toyonaka/nc_22180488/",
+   "name": "ディークラディア豊中少路プレビシオンコート",
+   "price": "4680万円",
+   "address": "大阪府豊中市少路１",
+   "access": "大阪モノレール本線「少路」徒歩2分",
+   "area_text": "77.35m 2 （壁芯）",
+   "built": "2005年8月",
+   "search_station": "少路",
+   "jhs": "第十一中",
+   "area_flag": "丘陵地（駅との高低差を内見で確認）",
+   "rank": "惜しい（75〜79㎡）",
+   "rights": "所有権",
+   "autolock": "記載なし（要確認）",
+   "floor": 6,
+   "stories": 7,
+   "elevator": "あり",
+   "kanri": "1万5470円／月",
+   "shuzen": "3万9700円／月",
+   "change": ""
+  },
+  {
+   "id": "22127243",
+   "url": "https://suumo.jp/ms/chuko/osaka/sc_toyonaka/nc_22127243/",
+   "name": "ディークラディア豊中小路プレビシオンコート",
+   "price": "4680万円",
+   "address": "大阪府豊中市少路１",
+   "access": "大阪モノレール本線「少路」徒歩4分",
+   "area_text": "77.35m 2 （壁芯）",
+   "built": "2005年8月",
+   "search_station": "少路",
+   "jhs": "第十一中",
+   "area_flag": "丘陵地（駅との高低差を内見で確認）",
+   "rank": "惜しい（75〜79㎡）",
+   "rights": "所有権",
+   "autolock": "あり",
+   "floor": 6,
+   "stories": 7,
+   "elevator": "あり",
+   "kanri": "1万5470円／月",
+   "shuzen": "3万9700円／月",
+   "change": ""
+  },
+  {
+   "id": "21748950",
+   "url": "https://suumo.jp/ms/chuko/osaka/sc_toyonaka/nc_21748950/",
+   "name": "ファインフラッツ豊中桜の町",
+   "price": "6700万円",
+   "address": "大阪府豊中市桜の町６",
+   "access": "大阪モノレール本線「少路」徒歩8分",
+   "area_text": "86.2m 2 （壁芯）",
+   "built": "2006年3月",
+   "search_station": "少路",
+   "jhs": "第二中",
+   "area_flag": "",
+   "rank": "条件を満たす",
+   "rights": "所有権",
+   "autolock": "記載なし（要確認）",
+   "floor": 7,
+   "stories": 8,
+   "elevator": "あり（6階建以上のため推定）",
+   "kanri": "1万5090円／月",
+   "shuzen": "1万7240円／月",
+   "change": ""
+  },
+  {
+   "id": "22180620",
+   "url": "https://suumo.jp/ms/chuko/osaka/sc_toyonaka/nc_22180620/",
+   "name": "ファインフラッツ豊中桜の町",
+   "price": "6700万円",
+   "address": "大阪府豊中市桜の町６",
+   "access": "大阪モノレール本線「少路」徒歩8分",
+   "area_text": "86.2m 2 （壁芯）",
+   "built": "2006年3月",
+   "search_station": "少路",
+   "jhs": "第二中",
+   "area_flag": "",
+   "rank": "条件を満たす",
+   "rights": "所有権",
+   "autolock": "記載なし（要確認）",
+   "floor": 7,
+   "stories": 8,
+   "elevator": "あり",
+   "kanri": "1万5090円／月",
+   "shuzen": "1万7240円／月",
+   "change": ""
   },
   {
    "id": "22147685",
@@ -374,51 +352,7 @@
    "elevator": "あり",
    "kanri": "1万5090円／月",
    "shuzen": "1万7240円／月",
-   "change": "新着"
-  },
-  {
-   "id": "22131772",
-   "url": "https://suumo.jp/ms/chuko/osaka/sc_toyonaka/nc_22131772/",
-   "name": "ファインフラッツ豊中桜の町",
-   "price": "6700万円",
-   "address": "大阪府豊中市桜の町６",
-   "access": "大阪モノレール本線「少路」徒歩8分",
-   "area_text": "86.2m 2 （壁芯）",
-   "built": "2006年3月",
-   "search_station": "少路",
-   "jhs": "第二中",
-   "area_flag": "",
-   "rank": "条件を満たす",
-   "rights": "所有権",
-   "autolock": "記載なし（要確認）",
-   "floor": 7,
-   "stories": 8,
-   "elevator": "あり",
-   "kanri": "1万5090円／月",
-   "shuzen": "1万7240円／月",
-   "change": "新着"
-  },
-  {
-   "id": "21748950",
-   "url": "https://suumo.jp/ms/chuko/osaka/sc_toyonaka/nc_21748950/",
-   "name": "ファインフラッツ豊中桜の町",
-   "price": "6800万円",
-   "address": "大阪府豊中市桜の町６",
-   "access": "大阪モノレール本線「少路」徒歩8分",
-   "area_text": "86.2m 2 （壁芯）",
-   "built": "2006年3月",
-   "search_station": "少路",
-   "jhs": "第二中",
-   "area_flag": "",
-   "rank": "条件を満たす",
-   "rights": "所有権",
-   "autolock": "記載なし（要確認）",
-   "floor": 7,
-   "stories": 8,
-   "elevator": "あり（6階建以上のため推定）",
-   "kanri": "1万5090円／月",
-   "shuzen": "1万7240円／月",
-   "change": "新着"
+   "change": ""
   },
   {
    "id": "21663569",
@@ -440,16 +374,16 @@
    "elevator": "あり",
    "kanri": "1万5470円／月",
    "shuzen": "3万9700円／月",
-   "change": "新着"
+   "change": ""
   },
   {
-   "id": "22141495",
-   "url": "https://suumo.jp/ms/chuko/osaka/sc_toyonaka/nc_22141495/",
+   "id": "22187915",
+   "url": "https://suumo.jp/ms/chuko/osaka/sc_toyonaka/nc_22187915/",
    "name": "ディークラディア豊中少路プレビシオンコート",
    "price": "4680万円",
    "address": "大阪府豊中市少路１-11-24",
    "access": "大阪モノレール本線「少路」徒歩2分",
-   "area_text": "77.35m 2 （壁芯）",
+   "area_text": "77.35m 2 （23.39坪）（壁芯）",
    "built": "2005年8月",
    "search_station": "少路",
    "jhs": "第十一中",
@@ -462,73 +396,7 @@
    "elevator": "あり",
    "kanri": "1万5470円／月",
    "shuzen": "3万9700円／月",
-   "change": "新着"
-  },
-  {
-   "id": "21642282",
-   "url": "https://suumo.jp/ms/chuko/osaka/sc_toyonaka/nc_21642282/",
-   "name": "ディークラディア豊中少路プレビシオンコート",
-   "price": "4680万円",
-   "address": "大阪府豊中市少路１",
-   "access": "大阪モノレール本線「少路」徒歩3分",
-   "area_text": "77.35m 2 （23.39坪）（壁芯）",
-   "built": "2005年8月",
-   "search_station": "少路",
-   "jhs": "第十一中",
-   "area_flag": "丘陵地（駅との高低差を内見で確認）",
-   "rank": "惜しい（75〜79㎡）",
-   "rights": "所有権",
-   "autolock": "記載なし（要確認）",
-   "floor": 6,
-   "stories": 7,
-   "elevator": "あり",
-   "kanri": "1万5470円／月",
-   "shuzen": "3万9700円／月",
-   "change": "新着"
-  },
-  {
-   "id": "22124005",
-   "url": "https://suumo.jp/ms/chuko/osaka/sc_toyonaka/nc_22124005/",
-   "name": "ディーグラディア豊中少路プレビシオンコート",
-   "price": "4680万円",
-   "address": "大阪府豊中市少路１-11-24",
-   "access": "大阪モノレール本線「少路」徒歩2分",
-   "area_text": "77.35m 2 （壁芯）",
-   "built": "2005年8月",
-   "search_station": "少路",
-   "jhs": "第十一中",
-   "area_flag": "丘陵地（駅との高低差を内見で確認）",
-   "rank": "惜しい（75〜79㎡）",
-   "rights": "所有権",
-   "autolock": "あり",
-   "floor": 6,
-   "stories": 7,
-   "elevator": "あり",
-   "kanri": "1万5470円／月",
-   "shuzen": "3万9700円／月",
-   "change": "新着"
-  },
-  {
-   "id": "21711919",
-   "url": "https://suumo.jp/ms/chuko/osaka/sc_toyonaka/nc_21711919/",
-   "name": "ディークラディア豊中少路 プレビシオンコート",
-   "price": "4680万円",
-   "address": "大阪府豊中市少路１",
-   "access": "大阪モノレール本線「少路」徒歩2分",
-   "area_text": "77.35m 2 （23.39坪）（壁芯）",
-   "built": "2005年8月",
-   "search_station": "少路",
-   "jhs": "第十一中",
-   "area_flag": "丘陵地（駅との高低差を内見で確認）",
-   "rank": "惜しい（75〜79㎡）",
-   "rights": "所有権",
-   "autolock": "記載なし（要確認）",
-   "floor": 6,
-   "stories": 7,
-   "elevator": "あり",
-   "kanri": "1万5470円／月",
-   "shuzen": "3万9700円／月",
-   "change": "新着"
+   "change": ""
   },
   {
    "id": "21796267",
@@ -550,7 +418,73 @@
    "elevator": "あり",
    "kanri": "1万5470円／月",
    "shuzen": "3万9700円／月",
-   "change": "新着"
+   "change": ""
+  },
+  {
+   "id": "21642282",
+   "url": "https://suumo.jp/ms/chuko/osaka/sc_toyonaka/nc_21642282/",
+   "name": "ディークラディア豊中少路プレビシオンコート",
+   "price": "4680万円",
+   "address": "大阪府豊中市少路１",
+   "access": "大阪モノレール本線「少路」徒歩3分",
+   "area_text": "77.35m 2 （23.39坪）（壁芯）",
+   "built": "2005年8月",
+   "search_station": "少路",
+   "jhs": "第十一中",
+   "area_flag": "丘陵地（駅との高低差を内見で確認）",
+   "rank": "惜しい（75〜79㎡）",
+   "rights": "所有権",
+   "autolock": "記載なし（要確認）",
+   "floor": 6,
+   "stories": 7,
+   "elevator": "あり",
+   "kanri": "1万5470円／月",
+   "shuzen": "3万9700円／月",
+   "change": ""
+  },
+  {
+   "id": "21711919",
+   "url": "https://suumo.jp/ms/chuko/osaka/sc_toyonaka/nc_21711919/",
+   "name": "ディークラディア豊中少路 プレビシオンコート",
+   "price": "4680万円",
+   "address": "大阪府豊中市少路１",
+   "access": "大阪モノレール本線「少路」徒歩2分",
+   "area_text": "77.35m 2 （23.39坪）（壁芯）",
+   "built": "2005年8月",
+   "search_station": "少路",
+   "jhs": "第十一中",
+   "area_flag": "丘陵地（駅との高低差を内見で確認）",
+   "rank": "惜しい（75〜79㎡）",
+   "rights": "所有権",
+   "autolock": "記載なし（要確認）",
+   "floor": 6,
+   "stories": 7,
+   "elevator": "あり",
+   "kanri": "1万5470円／月",
+   "shuzen": "3万9700円／月",
+   "change": ""
+  },
+  {
+   "id": "22124005",
+   "url": "https://suumo.jp/ms/chuko/osaka/sc_toyonaka/nc_22124005/",
+   "name": "ディーグラディア豊中少路プレビシオンコート",
+   "price": "4680万円",
+   "address": "大阪府豊中市少路１-11-24",
+   "access": "大阪モノレール本線「少路」徒歩2分",
+   "area_text": "77.35m 2 （壁芯）",
+   "built": "2005年8月",
+   "search_station": "少路",
+   "jhs": "第十一中",
+   "area_flag": "丘陵地（駅との高低差を内見で確認）",
+   "rank": "惜しい（75〜79㎡）",
+   "rights": "所有権",
+   "autolock": "あり",
+   "floor": 6,
+   "stories": 7,
+   "elevator": "あり",
+   "kanri": "1万5470円／月",
+   "shuzen": "3万9700円／月",
+   "change": ""
   },
   {
    "id": "22149713",
@@ -572,7 +506,7 @@
    "elevator": "あり",
    "kanri": "2万550円／月",
    "shuzen": "4万3050円／月",
-   "change": "新着"
+   "change": ""
   },
   {
    "id": "21776672",
@@ -594,7 +528,7 @@
    "elevator": "あり",
    "kanri": "1万5090円／月",
    "shuzen": "1万7240円／月",
-   "change": "新着"
+   "change": ""
   },
   {
    "id": "21718457",
@@ -616,7 +550,7 @@
    "elevator": "あり",
    "kanri": "1万5090円／月",
    "shuzen": "1万7240円／月",
-   "change": "新着"
+   "change": ""
   },
   {
    "id": "21699974",
@@ -638,7 +572,7 @@
    "elevator": "あり",
    "kanri": "1万5090円／月",
    "shuzen": "1万7240円／月",
-   "change": "新着"
+   "change": ""
   },
   {
    "id": "22030055",
@@ -660,7 +594,7 @@
    "elevator": "あり",
    "kanri": "9180円／月",
    "shuzen": "3万940円／月",
-   "change": "新着"
+   "change": ""
   },
   {
    "id": "21353954",
@@ -682,7 +616,7 @@
    "elevator": "あり",
    "kanri": "1万8730円／月",
    "shuzen": "2万3930円／月",
-   "change": "新着"
+   "change": ""
   },
   {
    "id": "21783486",
@@ -704,7 +638,7 @@
    "elevator": "あり",
    "kanri": "1万8730円／月",
    "shuzen": "2万3930円／月",
-   "change": "新着"
+   "change": ""
   },
   {
    "id": "21961503",
@@ -726,7 +660,7 @@
    "elevator": "あり",
    "kanri": "7900円／月",
    "shuzen": "2万6620円／月",
-   "change": "新着"
+   "change": ""
   },
   {
    "id": "22078065",
@@ -748,7 +682,7 @@
    "elevator": "あり",
    "kanri": "9700円／月",
    "shuzen": "3万400円／月",
-   "change": "新着"
+   "change": ""
   },
   {
    "id": "20641335",
@@ -770,7 +704,7 @@
    "elevator": "あり",
    "kanri": "7930円／月",
    "shuzen": "2万4290円／月",
-   "change": "新着"
+   "change": ""
   },
   {
    "id": "22107337",
@@ -792,7 +726,7 @@
    "elevator": "あり（6階建以上のため推定）",
    "kanri": "1万200円／月",
    "shuzen": "9200円／月",
-   "change": "新着"
+   "change": ""
   },
   {
    "id": "21573757",
@@ -814,7 +748,7 @@
    "elevator": "要確認",
    "kanri": "1万200円／月",
    "shuzen": "9200円／月",
-   "change": "新着"
+   "change": ""
   },
   {
    "id": "22039383",
@@ -836,7 +770,7 @@
    "elevator": "あり",
    "kanri": "1万200円／月",
    "shuzen": "9200円／月",
-   "change": "新着"
+   "change": ""
   },
   {
    "id": "20860904",
@@ -858,7 +792,7 @@
    "elevator": "あり",
    "kanri": "1万1400円／月",
    "shuzen": "1万200円／月",
-   "change": "新着"
+   "change": ""
   },
   {
    "id": "20925594",
@@ -880,7 +814,7 @@
    "elevator": "あり",
    "kanri": "1万1500円／月",
    "shuzen": "1万400円／月",
-   "change": "新着"
+   "change": ""
   },
   {
    "id": "22094723",
@@ -902,7 +836,7 @@
    "elevator": "要確認",
    "kanri": "1万2900円／月",
    "shuzen": "1万1600円／月",
-   "change": "新着"
+   "change": ""
   },
   {
    "id": "21446135",
@@ -924,95 +858,7 @@
    "elevator": "あり",
    "kanri": "1万2200円／月",
    "shuzen": "1万7440円／月",
-   "change": "新着"
-  },
-  {
-   "id": "21641168",
-   "url": "https://suumo.jp/ms/chuko/osaka/sc_suita/nc_21641168/",
-   "name": "ザ・パークハウス南千里アリーナ",
-   "price": "6980万円",
-   "address": "大阪府吹田市高野台１",
-   "access": "阪急千里線「南千里」徒歩6分",
-   "area_text": "85.2m 2 （25.77坪）（壁芯）",
-   "built": "2019年2月",
-   "search_station": "南千里",
-   "jhs": "高野台小→高野台中",
-   "area_flag": "丘陵地（駅との高低差を内見で確認）",
-   "rank": "条件を満たす",
-   "rights": "所有権",
-   "autolock": "あり",
-   "floor": 2,
-   "stories": 10,
-   "elevator": "あり",
-   "kanri": "1万1080円／月",
-   "shuzen": "1万4750円／月",
-   "change": "新着"
-  },
-  {
-   "id": "21268964",
-   "url": "https://suumo.jp/ms/chuko/osaka/sc_suita/nc_21268964/",
-   "name": "リーザス南千里",
-   "price": "8380万円",
-   "address": "大阪府吹田市津雲台１",
-   "access": "阪急千里線「南千里」徒歩2分",
-   "area_text": "81.85m 2 （壁芯）",
-   "built": "2007年1月",
-   "search_station": "南千里",
-   "jhs": "高野台小→高野台中",
-   "area_flag": "丘陵地（駅との高低差を内見で確認）",
-   "rank": "条件を満たす",
-   "rights": "所有権",
-   "autolock": "記載なし（要確認）",
-   "floor": 14,
-   "stories": null,
-   "elevator": "あり",
-   "kanri": "1万3520円／月",
-   "shuzen": "2万2170円／月",
-   "change": "新着"
-  },
-  {
-   "id": "21924788",
-   "url": "https://suumo.jp/ms/chuko/osaka/sc_suita/nc_21924788/",
-   "name": "プレミスト南千里",
-   "price": "6980万円",
-   "address": "大阪府吹田市佐竹台２-4-20",
-   "access": "阪急千里線「南千里」徒歩6分",
-   "area_text": "81.94m 2 （壁芯）",
-   "built": "2010年2月",
-   "search_station": "南千里",
-   "jhs": "佐竹台小→高野台中",
-   "area_flag": "丘陵地（駅との高低差を内見で確認）",
-   "rank": "条件を満たす",
-   "rights": "所有権",
-   "autolock": "記載なし（要確認）",
-   "floor": 2,
-   "stories": 13,
-   "elevator": "あり",
-   "kanri": "1万900円／月",
-   "shuzen": "1万3830円／月",
-   "change": "新着"
-  },
-  {
-   "id": "21572313",
-   "url": "https://suumo.jp/ms/chuko/osaka/sc_suita/nc_21572313/",
-   "name": "ライオンズ南千里マスターハウス",
-   "price": "6280万円",
-   "address": "大阪府吹田市佐竹台１",
-   "access": "阪急千里線「南千里」徒歩4分",
-   "area_text": "75.09m 2 （壁芯）",
-   "built": "2015年8月",
-   "search_station": "南千里",
-   "jhs": "佐竹台小→高野台中",
-   "area_flag": "丘陵地（駅との高低差を内見で確認）",
-   "rank": "惜しい（75〜79㎡）",
-   "rights": "所有権",
-   "autolock": "あり",
-   "floor": 10,
-   "stories": 11,
-   "elevator": "あり",
-   "kanri": "1万2200円／月",
-   "shuzen": "1万7420円／月",
-   "change": "新着"
+   "change": ""
   },
   {
    "id": "22065312",
@@ -1034,7 +880,73 @@
    "elevator": "あり",
    "kanri": "1万150円／月",
    "shuzen": "1万3500円／月",
-   "change": "新着"
+   "change": ""
+  },
+  {
+   "id": "21924788",
+   "url": "https://suumo.jp/ms/chuko/osaka/sc_suita/nc_21924788/",
+   "name": "プレミスト南千里",
+   "price": "6980万円",
+   "address": "大阪府吹田市佐竹台２-4-20",
+   "access": "阪急千里線「南千里」徒歩6分",
+   "area_text": "81.94m 2 （壁芯）",
+   "built": "2010年2月",
+   "search_station": "南千里",
+   "jhs": "佐竹台小→高野台中",
+   "area_flag": "丘陵地（駅との高低差を内見で確認）",
+   "rank": "条件を満たす",
+   "rights": "所有権",
+   "autolock": "記載なし（要確認）",
+   "floor": 2,
+   "stories": 13,
+   "elevator": "あり",
+   "kanri": "1万900円／月",
+   "shuzen": "1万3830円／月",
+   "change": ""
+  },
+  {
+   "id": "21572313",
+   "url": "https://suumo.jp/ms/chuko/osaka/sc_suita/nc_21572313/",
+   "name": "ライオンズ南千里マスターハウス",
+   "price": "6280万円",
+   "address": "大阪府吹田市佐竹台１",
+   "access": "阪急千里線「南千里」徒歩4分",
+   "area_text": "75.09m 2 （壁芯）",
+   "built": "2015年8月",
+   "search_station": "南千里",
+   "jhs": "佐竹台小→高野台中",
+   "area_flag": "丘陵地（駅との高低差を内見で確認）",
+   "rank": "惜しい（75〜79㎡）",
+   "rights": "所有権",
+   "autolock": "あり",
+   "floor": 10,
+   "stories": 11,
+   "elevator": "あり",
+   "kanri": "1万2200円／月",
+   "shuzen": "1万7420円／月",
+   "change": ""
+  },
+  {
+   "id": "21641168",
+   "url": "https://suumo.jp/ms/chuko/osaka/sc_suita/nc_21641168/",
+   "name": "ザ・パークハウス南千里アリーナ",
+   "price": "6980万円",
+   "address": "大阪府吹田市高野台１",
+   "access": "阪急千里線「南千里」徒歩6分",
+   "area_text": "85.2m 2 （25.77坪）（壁芯）",
+   "built": "2019年2月",
+   "search_station": "南千里",
+   "jhs": "高野台小→高野台中",
+   "area_flag": "丘陵地（駅との高低差を内見で確認）",
+   "rank": "条件を満たす",
+   "rights": "所有権",
+   "autolock": "あり",
+   "floor": 2,
+   "stories": 10,
+   "elevator": "あり",
+   "kanri": "1万1080円／月",
+   "shuzen": "1万4750円／月",
+   "change": ""
   },
   {
    "id": "22129357",
@@ -1056,7 +968,29 @@
    "elevator": "要確認",
    "kanri": "2万4300円／月",
    "shuzen": "2万1040円／月",
-   "change": "新着"
+   "change": ""
+  },
+  {
+   "id": "21268964",
+   "url": "https://suumo.jp/ms/chuko/osaka/sc_suita/nc_21268964/",
+   "name": "リーザス南千里",
+   "price": "8380万円",
+   "address": "大阪府吹田市津雲台１",
+   "access": "阪急千里線「南千里」徒歩2分",
+   "area_text": "81.85m 2 （壁芯）",
+   "built": "2007年1月",
+   "search_station": "南千里",
+   "jhs": "高野台小→高野台中",
+   "area_flag": "丘陵地（駅との高低差を内見で確認）",
+   "rank": "条件を満たす",
+   "rights": "所有権",
+   "autolock": "記載なし（要確認）",
+   "floor": 14,
+   "stories": null,
+   "elevator": "あり",
+   "kanri": "1万3520円／月",
+   "shuzen": "2万2170円／月",
+   "change": ""
   },
   {
    "id": "22047599",
@@ -1078,7 +1012,7 @@
    "elevator": "あり（6階建以上のため推定）",
    "kanri": "7800円／月",
    "shuzen": "9640円／月",
-   "change": "新着"
+   "change": ""
   },
   {
    "id": "21258711",
@@ -1100,7 +1034,7 @@
    "elevator": "あり",
    "kanri": "1万5040円／月",
    "shuzen": "2万4780円／月",
-   "change": "新着"
+   "change": ""
   },
   {
    "id": "21980324",
@@ -1122,7 +1056,7 @@
    "elevator": "あり",
    "kanri": "8100円／月",
    "shuzen": "5300円／月",
-   "change": "新着"
+   "change": ""
   }
  ]
 }
